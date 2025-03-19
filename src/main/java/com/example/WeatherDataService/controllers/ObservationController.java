@@ -48,4 +48,14 @@ public class ObservationController {
     public void deleteObservation(@PathVariable Integer id) {
         observationService.deleteObservation(id);
     }
+
+    @GetMapping("/observations/by-city/{id}")
+    public ResponseEntity<?> getObservationsByRCity(@PathVariable Integer id) {
+        try {
+            int totalObservations = observationService.getObservationsByCity(id);
+            return ResponseEntity.ok("Total Observations: " + totalObservations);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+        }
+    }
 }

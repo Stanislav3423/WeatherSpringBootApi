@@ -61,4 +61,8 @@ public class ObservationService {
                     return ResponseEntity.notFound().build();
                 });
     }
+
+    public int getObservationsByCity(int cityId) {
+        return observationRepository.getObservationsByRCity(cityId);
+    }
 }
