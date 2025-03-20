@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:3000", "https://weatherspringbootapi-aganc0dbc2hub4cg.polandcentral-01.azurewebsites.net")
+                .allowedOrigins("http://localhost:3000", "https://proud-field-006f74e03.6.azurestaticapps.net")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowCredentials(true);
     }
